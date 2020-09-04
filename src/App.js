@@ -11,6 +11,10 @@ function App() {
           Git Hub
         </a>
       </footer>
+      <button className="btn-btn primary">hello</button>
+      <button type="button" class="btn btn-primary">
+        Primary
+      </button>
     </div>
   );
 }

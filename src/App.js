@@ -5,7 +5,7 @@ import Weather from "./Weather";
 function App() {
   return (
     <div className="App">
-      <Weather />
+      <Weather defaultcity="New York" />
       <footer>
         Coded by Lydia K, Open-sourced on{" "}
         <a href="https://github.com/lydiakiu/react-weather-app-project-">

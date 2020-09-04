@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 import "font-awesome/css/font-awesome.min.css";
 import "./Weather.css";
+import Formatdate from "./Formatdate";
 import axios from "axios";
 
 export default function Weather(props) {
   const [data, setData] = useState({ ready: false });
+  const [city, setCity] = useState(props.defaultcity);
 
   function handleResponse(response) {
     setData({
       ready: true,
       temperature: response.data.main.temp,
       city: response.data.name,
-      date: "12:00 Friday",
+      date: new Date(response.data.dt * 1000),
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
@@ -21,15 +23,23 @@ export default function Weather(props) {
   }
   function search() {
     const apiKey = "8aaa27a8220932bbfcccd9f6036dc58b";
-    let city = "Hokkaido";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+
+  function updateCity(event) {
+    setCity(event.target.value);
   }
 
   if (data.ready) {
     return (
       <div className="container">
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="form-row">
             <div className="col-7">
               <input
@@ -37,8 +47,9 @@ export default function Weather(props) {
                 id="city-input"
                 className="form-control shadow-sm w-100"
                 placeholder="Search City"
-                autofocus="on"
+                autoFocus="on"
                 autocomplete="off"
+                onChange={updateCity}
               />
             </div>
             <button
@@ -62,7 +73,7 @@ export default function Weather(props) {
 
         <div className="row">
           <div className="col-3">
-            <h2>{data.date}</h2>
+            <Formatdate />
           </div>
 
           <div className="col-3">

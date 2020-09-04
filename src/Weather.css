@@ -17,10 +17,6 @@ ul {
   padding: 0;
 }
 
-.col-2 img {
-  margin-right: 10px;
-  size: 100px;
-}
 .container {
   max-width: 600px;
   margin: 30px auto;

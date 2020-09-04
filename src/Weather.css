@@ -17,8 +17,12 @@ ul {
   padding: 0;
 }
 
+.col-2 img {
+  margin-right: 10px;
+  size: 100px;
+}
 .container {
-  max-width: 700px;
+  max-width: 600px;
   margin: 30px auto;
   margin-bottom: 2px;
   padding: 20px;
@@ -32,4 +36,9 @@ ul {
   );
   background-size: 840px;
   background-repeat: no-repeat;
+}
+.col-3 li {
+  font-size: 30px;
+  font-family: "Exo 2", sans-serif;
+  color: #212121;
 }

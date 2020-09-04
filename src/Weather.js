@@ -7,11 +7,11 @@ export default function Weather() {
     <div className="container">
       <form>
         <div className="form-row">
-          <div className="col-5">
+          <div className="col-7">
             <input
               type="text"
               id="city-input"
-              className="form-control shadow-sm"
+              className="form-control shadow-sm w-100"
               placeholder="Search City"
               autofocus="on"
               autocomplete="off"
@@ -23,9 +23,9 @@ export default function Weather() {
           <div className="col-4">
             <button
               type="button"
-              className="btn btn-outline-secondary shawdow-sm"
+              className="btn btn-outline-secondary shawdow-sm w-100"
             >
-              My location
+              My Location
             </button>
           </div>
         </div>
@@ -41,14 +41,16 @@ export default function Weather() {
         <div className="col-3">
           <ul>
             <li>20°C</li>
-            <li>Clear</li>
+            <li>
+              <h2>Clear Sky</h2>
+            </li>
           </ul>
         </div>
 
-        <div class="col-2">
+        <div className="col-2">
           <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="rain" />
         </div>
-        <div class="col-4">
+        <div className="col-4">
           <ul>
             <li>Humidity:20%</li>
             <li>Wind Speed:10km/h</li>

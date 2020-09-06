@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "font-awesome/css/font-awesome.min.css";
 import "./Weather.css";
 import Weatherinfo from "./Weatherinfo";
+import Forecast from "./Forecast";
 import axios from "axios";
 
 export default function Weather(props) {
@@ -49,7 +50,7 @@ export default function Weather(props) {
                 className="form-control shadow-sm w-100"
                 placeholder="Search City"
                 autoFocus="on"
-                autocomplete="off"
+                autoComplete="off"
                 onChange={updateCity}
               />
             </div>
@@ -63,6 +64,7 @@ export default function Weather(props) {
         </form>
         <Weatherinfo weatherdata={data} />
         <hr />
+        <Forecast city={data.city} />
       </div>
     );
   } else {

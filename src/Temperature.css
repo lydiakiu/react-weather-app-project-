@@ -1,0 +1,13 @@
+.temperature {
+  font-family: "Exo 2", sans-serif;
+  color: #212121;
+  font-size: 40px;
+}
+
+.unit {
+  font-family: "Exo 2", sans-serif;
+  color: #212121;
+  font-size: 26px;
+  position: relative;
+  top: -10px;
+}

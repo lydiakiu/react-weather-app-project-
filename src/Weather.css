@@ -38,6 +38,12 @@ ul {
   font-family: "Exo 2", sans-serif;
   color: #212121;
 }
+.properties {
+  padding-top: 10px;
+  font-family: "Exo 2", sans-serif;
+  color: #212121;
+  font-size: 18px;
+}
 img {
   size: 100px;
 }

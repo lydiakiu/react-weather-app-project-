@@ -9,11 +9,14 @@ export default function ForecastComponent(props) {
 
   return (
     <div className="col">
-      <strong>{hours()}</strong>
+      {hours()}
       <img
         src={`https://openweathermap.org/img/wn/${props.data.weather[0].icon}@2x.png`}
+        alt={`${props.data.weather[0].description}`}
       />
       {Math.round(props.data.main.temp)}°C
+      <br />
+      {`${props.data.weather[0].description}`}
     </div>
   );
 }

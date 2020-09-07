@@ -18,7 +18,7 @@ ul {
 }
 
 .container {
-  max-width: 600px;
+  max-width: 650px;
   margin: 30px auto;
   margin-bottom: 2px;
   padding: 20px;
@@ -44,6 +44,6 @@ ul {
   color: #212121;
   font-size: 18px;
 }
-img {
+.row .col-4 img {
   size: 100px;
 }

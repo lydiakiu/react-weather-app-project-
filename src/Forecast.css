@@ -1,8 +1,10 @@
-img {
+.col img {
   display: block;
   margin: 0 auto;
   max-width: 60px;
 }
 .col {
   text-align: center;
+  text-transform: capitalize;
+  font-family: "Exo 2", sans-serif;
 }
